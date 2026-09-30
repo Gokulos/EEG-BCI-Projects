@@ -26,7 +26,7 @@ Initial time-series evaluation (`eegplot` / channel scroll) revealed high-amplit
 - **High-Pass Filter:** Filtered at **1 Hz** to eliminate slow drifts and low-frequency artifacts.
 - **Reference:** Common Average Referencing (**CAR**).
 ### 3. Independent Component Analysis (ICA)
-Decomposition was performed using **Extended Infomax ICA** (`'extended', 1`). A total of 29 artifactual components were identified and removed:
+Decomposition was performed using **Extended Infomax ICA** (`'extended', 1`). A total of 29 artifactual components were identified using visual inspection using eye (spectral, temporal and spatial) and removed:
 `[1, 2, 22, 23, 24, 25, 26, 27, 29, 31, 34, 35, 38, 39, 41, 42, 45, 46, 47, 48, 52, 53, 56, 57, 58, 59, 60, 61, 62]`
 #### Some of the Rejected Components
 | Component | Type | Topoplot | ERP Image | Power Spectrum | Description |
