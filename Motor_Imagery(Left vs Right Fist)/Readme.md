@@ -60,12 +60,12 @@ Contralateral desynchronization is prominently observable across the right motor
 Atypical topography: localized right-hemisphere desynchronization persists despite right-hand execution, alongside apparent broad-band volume conduction across central channels.
 | 11 Hz | 12 Hz | 13 Hz | 14 Hz |
 | :---: | :---: | :---: | :---: |
-| ![T2 11Hz](assets/t2_topo_11hz.png) | ![T2 12Hz](assets/t2_topo_12hz.png) | ![T2 13Hz](assets/t2_topo_13hz.png) | ![T2 14Hz](assets/t2_topo_14hz.png) |
+| ![T2 11Hz](Figures/T2/Topoplots/11Hz.png) | ![T2 12Hz](Figures/T2/Topoplots/12Hz.png) | ![T2 13Hz](Figures/T2/Topoplots/13Hz.png) | ![T2 14Hz](Figures/T2/Topoplots/14Hz.png) |
 #### Spectral Power & Time-Frequency Dynamics (C3 vs. C4)
 | Metric | Electrode C3 (Contralateral) | Electrode C4 (Ipsilateral) | Observation |
 | :--- | :---: | :---: | :--- |
-| **Power Spectrum** | ![T2 C3 PSD](assets/t2_psd_c3.png) | ![T2 C4 PSD](assets/t2_psd_c4.png) | C3 exhibits higher power than C4, deviating from expected contralateral attenuation. |
-| **ERSP** | ![T2 C3 ERSP](assets/t2_ersp_c3.png) | ![T2 C4 ERSP](assets/t2_ersp_c4.png) | Persistent desynchronization concentrated over C4 (right hemisphere) within mu and beta ranges rather than the expected C3 activation. |
+| **Power Spectrum** | ![T2 C3 PSD](Figures/T2/Power_Spectrum/C3.png) | ![T2 C4 PSD](Figures/T2/Power_Spectrum/C4.png) | C3 exhibits higher power than C4, deviating from expected contralateral attenuation. |
+| **ERSP** | ![T2 C3 ERSP](Figures/T2/ERSP_Plots/C3.png) | ![T2 C4 ERSP](Figures/T2/ERSP_Plots/C4.png) | Persistent desynchronization concentrated over C4 (right hemisphere) within mu and beta ranges rather than the expected C3 activation. |
 ---
 ## Feature Extraction & Classification (BCILAB)
 - **Algorithm:** Common Spatial Pattern (CSP) filter extraction targeting sensorimotor rhythm frequency bins (8–30 Hz).
