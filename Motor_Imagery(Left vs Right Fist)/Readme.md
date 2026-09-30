@@ -18,7 +18,8 @@
 ## Preprocessing
 Raw Data → Interpolation (T7) → High-Pass Filter (1 Hz) → CAR → Extended Infomax ICA → Artifact Component Rejection → Visualisation
 ### 1. Channel Inspection & Bad Channel Interpolation
-Initial time-series evaluation (`eegplot` / channel scroll) revealed high-amplitude, high-frequency noise isolated to electrode **T7**, which was not shared by neighboring channels. T7 was identified as a bad channel and was interpolated.
+Initial time-series evaluation (`eegplot` / channel scroll) revealed high-amplitude, high-frequency noise isolated to electrode **T7**, which was not shared by neighboring channels. T7 was identified as a bad channel and was interpolated. The plot also showed eye blink artefacts clearly visible on the frontal Fp electrodes
+
 ![Raw Data Scroll](Figures/1.png)
 *Figure 1: Initial channel time series displaying isolated noise on electrode T7.*
 ### 2. Filtering & Rereferencing
@@ -31,7 +32,7 @@ Decomposition was performed using **Extended Infomax ICA** (`'extended', 1`). A 
 | Component | Type | Topoplot | ERP Image | Power Spectrum | Description |
 | :--- | :--- | :---: | :---: | :---: | :--- |
 | **IC 1** | Eye Blink | ![IC1 Topo](Figures/Components/1/Topoplot.png) | ![IC1 ERP](Figures/Components/1/ERP_Image.png) | ![IC1 Spec](Figures/Components/1/Power_Spectrum.png) | Equal frontal electrode distribution over both orbits; sharp transient peaks in the ERP image; lack of expected mu (7–14 Hz) or beta (18–30 Hz) rhythm peaks. |
-| **IC 2** | Lateral Eye Movement | ![IC2 Topo](assets/ic2_topoplot.png) | ![IC2 ERP](assets/ic2_erpimage.png) | ![IC2 Spec](assets/ic2_spectrum.png) | Clear horizontal dipole across frontal electrodes (opposing polarities); typical ocular tracking dynamics with no spectral mu/beta profile. |
+| **IC 2** | Lateral Eye Movement | ![IC2 Topo](Figures/Components/2/Topoplot.png) | ![IC2 ERP](Figures/Components/2/ERP_Image.png) | ![IC2 Spec](Figures/Components/2/Power_Spectrum.png) | Clear horizontal dipole across frontal electrodes (opposing polarities); typical ocular tracking dynamics with no spectral mu/beta profile. |
 | **IC 22** | Muscle Artifact | ![IC22 Topo](assets/ic22_topoplot.png) | ![IC22 ERP](assets/ic22_erpimage.png) | ![IC22 Spec](assets/ic22_spectrum.png) | Localized unilateral temporal projection near jaw/ear; broad high-frequency spectral elevation characteristic of EMG activity. |
 | **IC 38** | Channel Noise | ![IC38 Topo](assets/ic38_topoplot.png) | ![IC38 ERP](assets/ic38_erpimage.png) | ![IC38 Spec](assets/ic38_spectrum.png) | Sharp focus on a single electrode projection with a monotonic power roll-off, consistent with residual channel-specific noise. |
 ---
