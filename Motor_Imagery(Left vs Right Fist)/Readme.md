@@ -37,11 +37,12 @@ Decomposition was performed using **Extended Infomax ICA** (`'extended', 1`). A 
 | **IC 38** | Channel Noise | ![IC38 Topo](Figures/Components/38/Topoplot.png) | ![IC38 ERP](Figures/Components/38/ERP_Image.png) | ![IC38 Spec](Figures/Components/38/Power_Spectrum.png) | Sharp focus on a single electrode projection with a monotonic power roll-off, consistent with residual channel-specific noise. |
 ---
 
-### 4. Post-ICA Cleaned Continuous Data
-![Cleaned Data Scroll](assets/cleaned_channel_scroll.png)
-*Figure 2: Time-series scroll following artifact component subtraction.*
+## 5. Visualizations
+### Post-ICA Cleaned Continuous Data
+![Cleaned Data Scroll](Figures/2.png)
+*Figure 2: Time-series scroll following artifact components removal.*
 ---
-## Class-Specific Event Analysis & Visualizations
+### Class Specific
 The continuous data was segmented into class-specific epochs based on markers **T1** (Left Fist) and **T2** (Right Fist) to analyze sensorimotor rhythms (mu: 8–13 Hz, beta: 18–30 Hz) and Event-Related Desynchronization/Synchronization (ERD/ERS).
 ---
 ### Class T1: Left Fist Motor Imagery
@@ -49,12 +50,12 @@ The continuous data was segmented into class-specific epochs based on markers **
 Contralateral desynchronization is prominently observable across the right motor cortex (C4 area).
 | 11 Hz | 12 Hz | 13 Hz | 14 Hz |
 | :---: | :---: | :---: | :---: |
-| ![T1 11Hz](assets/t1_topo_11hz.png) | ![T1 12Hz](assets/t1_topo_12hz.png) | ![T1 13Hz](assets/t1_topo_13hz.png) | ![T1 14Hz](assets/t1_topo_14hz.png) |
+| ![T1 11Hz](Figures/T1/Topoplots/11hz.png) | ![T1 12Hz](Figures/T1/Topoplots/12hz.png) | ![T1 13Hz](Figures/T1/Topoplots/13hz.png) | ![T1 14Hz](Figures/T1/Topoplots/14hz.png) |
 #### Spectral Power & Time-Frequency Dynamics (C3 vs. C4)
 | Metric | Electrode C3 (Ipsilateral) | Electrode C4 (Contralateral) | Observation |
 | :--- | :---: | :---: | :--- |
-| **Power Spectrum** | ![T1 C3 PSD](assets/t1_psd_c3.png) | ![T1 C4 PSD](assets/t1_psd_c4.png) | Attenuated ~10 Hz spectral peak at C4 relative to C3, validating expected contralateral mu-suppression. |
-| **ERSP** | ![T1 C3 ERSP](assets/t1_ersp_c3.png) | ![T1 C4 ERSP](assets/t1_ersp_c4.png) | Pronounced post-stimulus power drop (blue desynchronization) at C4 in the 500–1000 ms window across mu and beta bands. |
+| **Power Spectrum** | ![T1 C3 PSD](Figures/T1/Power Spectrum/C3.png) | ![T1 C4 PSD](Figures/T1/Power Spectrum/C4.png) | Attenuated ~10 Hz spectral peak at C4 relative to C3, validating expected contralateral mu-suppression. |
+| **ERSP** | ![T1 C3 ERSP](Figures/T1/ERSP_Plots/C3.png) | ![T1 C4 ERSP](Figures/T1/ERSP_Plots/C4.png) | Pronounced post-stimulus power drop (blue desynchronization) at C4 in the 500–1000 ms window across mu and beta bands. |
 ---
 ### Class T2: Right Fist Motor Imagery
 #### Topographical Maps (Mu Band)
