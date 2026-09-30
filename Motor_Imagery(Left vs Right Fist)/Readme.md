@@ -40,7 +40,7 @@ Decomposition was performed using **Extended Infomax ICA** (`'extended', 1`). A 
 ## 5. Visualizations
 ### Post-ICA Cleaned Continuous Data
 ![Cleaned Data Scroll](Figures/2.png)
- *Figure 2: Time-series scroll following artifact components removal, showing cleaned artefacts*
+ *Figure 2: Time-series plot after artifacts removal using ICA, showing no observable eye-blink or muscle artifacts afterwards.*
 ### Class Specific
 The continuous data was segmented into class-specific epochs based on markers **T1** (Left Fist) and **T2** (Right Fist) to analyze sensorimotor rhythms (mu: 8–13 Hz, beta: 18–30 Hz) and Event-Related Desynchronization/Synchronization (ERD/ERS).
 ### Class T1: Left Fist Motor Imagery
