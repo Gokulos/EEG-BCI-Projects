@@ -1,11 +1,11 @@
 # Motor Imagery EEG Classification: Left vs. Right Fist
-A Brain-Computer Interface (BCI) analysis and classification pipeline distinguishing left vs. right fist open/close motor imagery using Common Spatial Patterns (CSP) and Linear Discriminant Analysis (LDA).
+BCI project on left vs. right fist (open/close) motor imagery.
 ---
-## Overview & Toolstack
-- **Preprocessing & Visualization:** MATLAB via **EEGLAB**
+## Tools Used
+- **Preprocessing & Visualization:** MATLAB via **EEGLAB**(Filtering, Rereferecing, ICA Decomposition)
 - **Feature Extraction & Classification:** MATLAB via **BCILAB** (Common Spatial Patterns, BCI approach definition, and LDA classifier training)
 ---
-## Dataset & Protocol
+## Dataset
 - **Source:** [NEMAR Dataset on004362](https://nemar.org/dataset/on004362)
 - **Subject:** Subject 002
 - **Runs Selected:** Runs 4, 8, and 12 (Left vs. Right fist motor imagery tasks)
@@ -16,19 +16,19 @@ A Brain-Computer Interface (BCI) analysis and classification pipeline distinguis
 | `T1` | Left fist imagery onset |
 | `T2` | Right fist imagery onset |
 ---
-## Preprocessing Pipeline
-Raw Data → Channel Inspection & Interpolation (T7) → High-Pass Filter (1 Hz) → CAR → Extended Infomax ICA → Artifact Rejection → Clean Data
+## Preprocessing
+Raw Data → Interpolation (T7) → High-Pass Filter (1 Hz) → CAR → Extended Infomax ICA → Artifact Component Rejection → Visualisation
 ### 1. Channel Inspection & Bad Channel Interpolation
-Initial time-series evaluation (`eegplot` / channel scroll) revealed high-amplitude, high-frequency noise isolated to electrode **T7**, which was not shared by neighboring channels. T7 was identified as a bad channel and spherical spline interpolated.
-![Raw Data Scroll](assets/raw_channel_scroll.png)
+Initial time-series evaluation (`eegplot` / channel scroll) revealed high-amplitude, high-frequency noise isolated to electrode **T7**, which was not shared by neighboring channels. T7 was identified as a bad channel and was interpolated.
+![Raw Data Scroll](Figures/1.png)
 *Figure 1: Initial channel time series displaying isolated noise on electrode T7.*
 ### 2. Filtering & Rereferencing
-- **High-Pass Filter:** Zero-phase filter at **1 Hz** to eliminate slow drifts and low-frequency DC artifacts.
+- **High-Pass Filter:** Filtered at **1 Hz** to eliminate slow drifts and low-frequency artifacts.
 - **Reference:** Common Average Referencing (**CAR**).
 ### 3. Independent Component Analysis (ICA)
 Decomposition was performed using **Extended Infomax ICA** (`'extended', 1`). A total of 29 artifactual components were identified and removed:
 `[1, 2, 22, 23, 24, 25, 26, 27, 29, 31, 34, 35, 38, 39, 41, 42, 45, 46, 47, 48, 52, 53, 56, 57, 58, 59, 60, 61, 62]`
-#### Key Rejected Components
+#### Some of the Rejected Components
 | Component | Type | Topoplot | ERP Image | Power Spectrum | Description |
 | :--- | :--- | :---: | :---: | :---: | :--- |
 | **IC 1** | Eye Blink | ![IC1 Topo](assets/ic1_topoplot.png) | ![IC1 ERP](assets/ic1_erpimage.png) | ![IC1 Spec](assets/ic1_spectrum.png) | Equal frontal electrode distribution over both orbits; sharp transient peaks in the ERP image; lack of expected mu (7–14 Hz) or beta (18–30 Hz) rhythm peaks. |
