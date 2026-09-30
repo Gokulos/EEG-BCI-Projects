@@ -28,7 +28,7 @@ Initial time-series evaluation (`eegplot` / channel scroll) revealed high-amplit
 ### 3. Independent Component Analysis (ICA)
 Decomposition was performed using **Extended Infomax ICA** (`'extended', 1`). A total of 29 artifactual components were identified using visual inspection using eye (spectral, temporal and spatial) and removed:
 `[1, 2, 22, 23, 24, 25, 26, 27, 29, 31, 34, 35, 38, 39, 41, 42, 45, 46, 47, 48, 52, 53, 56, 57, 58, 59, 60, 61, 62]`
-#### Some of the Rejected Components
+#### Some of the Rejected Components(See the dataset for full components)
 | Component | Type | Topoplot | ERP Image | Power Spectrum | Description |
 | :--- | :--- | :---: | :---: | :---: | :--- |
 | **IC 1** | Eye Blink | ![IC1 Topo](Figures/Components/1/Topoplot.png) | ![IC1 ERP](Figures/Components/1/ERP_Image.png) | ![IC1 Spec](Figures/Components/1/Power_Spectrum.png) | Equal frontal electrode distribution over both orbits; sharp transient peaks in the ERP image; lack of expected mu (7–14 Hz) or beta (18–30 Hz) rhythm peaks. |
