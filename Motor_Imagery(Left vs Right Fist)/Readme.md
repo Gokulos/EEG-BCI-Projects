@@ -1,8 +1,8 @@
-# Motor Imagery EEG Classification: Left vs. Right Fist
+# Left vs Right Fist Motor Imagery
 
 ## Tools Used
-- **Preprocessing & Visualization:** MATLAB via **EEGLAB**(Filtering, Rereferecing, ICA Decomposition)
-- **Feature Extraction & Classification:** MATLAB via **BCILAB** (Common Spatial Patterns, BCI approach definition, and LDA classifier training)
+- For Preprocessing & Visualization,  MATLAB via **EEGLAB**(Filtering, Rereferecing, ICA Decomposition)
+- For Feature Extraction & Classification, MATLAB via **BCILAB** (Common Spatial Patterns, BCI approach definition, and LDA classifier training)
 ---
 ## Dataset
 - **Source:** [NEMAR Dataset on004362](https://nemar.org/dataset/on004362)
