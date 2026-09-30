@@ -1,6 +1,5 @@
 # Motor Imagery EEG Classification: Left vs. Right Fist
-BCI project on left vs. right fist (open/close) motor imagery.
----
+
 ## Tools Used
 - **Preprocessing & Visualization:** MATLAB via **EEGLAB**(Filtering, Rereferecing, ICA Decomposition)
 - **Feature Extraction & Classification:** MATLAB via **BCILAB** (Common Spatial Patterns, BCI approach definition, and LDA classifier training)
