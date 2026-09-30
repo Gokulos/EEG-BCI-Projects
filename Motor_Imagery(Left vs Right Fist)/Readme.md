@@ -52,7 +52,7 @@ Contralateral desynchronization is prominently observable across the right motor
 #### Spectral Power & Time-Frequency(ERSP) Plots (C3 vs. C4)
 | Metric | Electrode C3 (Ipsilateral) | Electrode C4 (Contralateral) | Observation |
 | :--- | :---: | :---: | :--- |
-| **Power Spectrum** | ![T1 C3 PSD](Figures/T1/Power_Spectrum/C3.png) | ![T1 C4 PSD](Figures/T1/Power_Spectrum/C4.png) | Reduced ~10 Hz spectral power at C4 relative to C3, validating expected contralateral mu-desynchronisation. |
+| **Power Spectrum** | ![T1 C3 PSD](Figures/T1/Power_Spectrum/C3.png) | ![T1 C4 PSD](Figures/T1/Power_Spectrum/C4.png) | Reduced 10 Hz spectral power at C4 relative to C3, validating expected contralateral mu-desynchronisation. |
 | **ERSP** | ![T1 C3 ERSP](Figures/T1/ERSP_Plots/C3.png) | ![T1 C4 ERSP](Figures/T1/ERSP_Plots/C4.png) | Visible post-stimulus power drop (blue intensity) at C4 in the 500–1000 ms window across mu and beta bands. |
 ---
 ### Class T2: Right Fist Motor Imagery
