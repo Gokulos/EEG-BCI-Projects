@@ -21,7 +21,7 @@ Raw Data → Interpolation (T7) → High-Pass Filter (1 Hz) → CAR → Extended
 Initial time-series evaluation (`eegplot` / channel scroll) revealed high-amplitude, high-frequency noise isolated to electrode **T7**, which was not shared by neighboring channels. T7 was identified as a bad channel and was interpolated. The plot also showed eye blink artefacts clearly visible on the frontal Fp electrodes
 
 ![Raw Data Scroll](Figures/1.png)
-*Figure 1: Initial channel time series displaying isolated noise on electrode T7, and channel noise on frontal electrodes fp1, fp2, fpz*
+*Figure 1: Initial channel time series displaying isolated noise on electrode T7, and eye blink artefacts on frontal electrodes fp1, fp2, fpz*
 ### 2. Filtering & Rereferencing
 - **High-Pass Filter:** Filtered at **1 Hz** to eliminate slow drifts and low-frequency artifacts.
 - **Reference:** Common Average Referencing (**CAR**).
