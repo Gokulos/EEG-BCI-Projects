@@ -77,22 +77,18 @@ Before feeding the signals into the classifier pipeline, the electrodes responsi
 * `C5`, `C3`, `C1`, `CZ`, `C2`, `C4`, `C6`
 * `CP3`, `CPZ`, `CP4`
 
-To prevent peripheral artifacts (such as neck EMG and ocular drifts) from dominating spatial filtering, a dedicated dataset containing exclusively these 13 sensorimotor channels was generated, unified into a single `.set` file, and loaded into BCILAB.
-
----
+To prevent peripheral artifacts from dominating spatial filtering, a dedicated dataset containing exclusively these 13 sensorimotor channels was generated, unified into a single `.set` file, and loaded into MATLAB using BCCILAB functions.
 
 ### 2. Feature Extraction and Model Training
 Common Spatial Pattern (CSP) filtering was applied to maximize the variance ratio between the two motor imagery conditions:
 * **Spectral Filter:** Minimum-phase FIR filter tuned to sensorimotor mu and beta bands ([6 8 28 32] Hz).
 * **Epoch Window:** 0.5 s to 3.5 s relative to trial cue onset at 0.0 s.
-* **Pattern Pairs:** 2 pattern pairs (4 patterns total) were extracted. The pattern count was constrained to match the reduced degrees of freedom of the 13-channel montage.
+* **Pattern Pairs:** 2 pattern pairs (4 patterns total) were extracted. The pattern count was reduced to 2 instead of 3 due to reduced number of channels.
 * **Classifier:** Linear Discriminant Analysis (LDA) evaluated via 5-fold cross-validation.
-
----
 
 ### 3. Classification Performance
 
-Restricting the analysis to the sensorimotor strip eliminated artifactual variance and yielded a cross-validated performance of **88.89% mean accuracy**:
+Restricting the analysis to the sensorimotor strip eliminated artifactual variance and yielded a cross-validated performance of **88.89% mean accuracy**, instead of 70% previously with all channels.
 
 | Metric | Cross-Validation Score (N=5) |
 | :--- | :--- |
@@ -109,11 +105,7 @@ Restricting the analysis to the sensorimotor strip eliminated artifactual varian
 * **Fold 4:** Accuracy: 77.78% | TPR: 0.7500 | TNR: 0.8000 | Error Rate: 0.2222
 * **Fold 5:** Accuracy: 77.78% | TPR: 0.5000 | TNR: 1.0000 | Error Rate: 0.2222
 
-The classifier sustained high specificity (average TNR of 96.0%), demonstrating consistent decoding of right-fist trials across all folds.
-
----
-
-### 4. Spatial Pattern Validation (Neurophysiological Ground Truth)
+### 4. Spatial Pattern Validation
 
 Because the dataset was restricted to a 13-channel central grid without peripheral anchor electrodes, standard 2D scalp interpolations auto-scale and distort across the head cartoon. Rather than relying solely on visual inspection of deformed topoplots, the forward-model spatial projection weights ($a = (W^{-1})^T$) were extracted and analyzed numerically:
 
@@ -137,14 +129,16 @@ CP4        |      +4.0367 |      +1.4953 |      +0.6608 |      -0.0536
 ==============================================================
 ```
 
-#### Physiological Interpretation
 In CSP, eigenvector polarities are mathematically arbitrary; absolute magnitude $\vert{}a\vert{}$ reflects the strength of the underlying neural source:
 
 * **Pattern 4 (Right Fist / T2):** Confirms clear contralateral left sensorimotor activation. The negative pole peaks sharply over the left motor cortex at **`CP3` (-6.9966)**, **`C3` (-6.0726)**, and **`C1` (-5.3184)**, while the ipsilateral right hemisphere remains near baseline (**`CP4` at -0.0536**).
+
 * **Pattern 3 (Right Fist / T2):** Identifies an anteroposterior dipole spanning between frontocentral premotor areas (**`FCZ` -5.7227**, **`FC3` -5.1974**) and centroparietal somatosensory electrodes (**`CP3` +3.4520**).
+  
 * **Pattern 1 (Left Fist / T1):** Isolates the contralateral right hemisphere, with primary positive activation focused over **`CP4` (+4.0367)** and **`C6` (+2.4071)**, opposing anterior midline activity (**`FCZ` -5.8258**).
+  
 * **Pattern 2 (Left Fist / T1):** Functions as a lateral reference component, isolating left-lateral motor strip power (**`C5` -6.1516**) to suppress non-task-specific bilateral activity.
 
-The numerical weights verify that the 88.89% classification accuracy is grounded in physiologically valid, contralateral sensorimotor rhythm modulation rather than spurious artifacts.
+!!! The numerical weights verify that the 88.89% classification accuracy is grounded in physiologically valid, contralateral sensorimotor rhythm modulation rather than artifacts.
 
 ## Repository Structure
