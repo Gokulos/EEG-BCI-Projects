@@ -1,6 +1,6 @@
 ## Dataset
 
-The datasets used in this project can be downloaded from the following Google Drive folder:
+The datasets can be downloaded from the following Google Drive folder:
 
 **[Download the datasets](https://drive.google.com/drive/folders/1VeKmK3T90rIhqgx3hsD815sWbIJdjWlZ?usp=sharing)**
 
