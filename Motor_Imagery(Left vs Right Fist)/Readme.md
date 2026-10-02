@@ -153,8 +153,8 @@ Motor_Imagery(Left vs Right Fist)/
 │   │   ├── 2Filtered.fdt
 │   │   ├── 3Filtered, T7 Interpolated.set
 │   │   ├── 3Filtered, T7 Interpolated.fdt
-│   │   ├── 4Filtered, T7 Interpolated, Av...set[cite: 2]
-│   │   ├── 4Filtered, T7 Interpolated, Av...fdt[cite: 2]
+│   │   ├── 4Filtered, T7 Interpolated, Av...set
+│   │   ├── 4Filtered, T7 Interpolated, Av...fdt
 │   │   ├── 5Filtered, T7 Interpolated, Av...set
 │   │   ├── 5Filtered, T7 Interpolated, Av...fdt
 │   │   ├── 6Filtered,T7Interpolated,Avg_...set
@@ -169,5 +169,5 @@ Motor_Imagery(Left vs Right Fist)/
 │   ├── Creating_13_Channel_dataset.m
 │   ├── Preprocessing.m
 │   ├── Visualisations.m
-│   └── Readme.md[cite: 3]
-└── Readme.md[cite: 3]
+│   └── Readme.md
+└── Readme.md
