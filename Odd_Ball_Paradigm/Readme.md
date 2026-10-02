@@ -1,4 +1,4 @@
-# ERP Analysis and BCI Classification Pipeline (EEGLAB & BCILAB)
+# P300 Detection in Oddball paradigm
 
 This repository contains reproducible pipelines for electroencephalography (EEG) event-related potential (ERP) analysis and Brain-Computer Interface (BCI) classification using EEGLAB and BCILAB in MATLAB.
 
