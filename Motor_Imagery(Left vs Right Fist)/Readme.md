@@ -142,3 +142,32 @@ In CSP, eigenvector polarities are mathematically arbitrary; absolute magnitude 
 !!! The numerical weights verify that the 88.89% classification accuracy is grounded in physiologically valid, contralateral sensorimotor rhythm modulation rather than artifacts.
 
 ## Repository Structure
+
+```text
+Motor_Imagery(Left vs Right Fist)/
+├── Scripts/
+│   ├── Datasets/
+│   │   ├── 1 - Original Dataset.set
+│   │   ├── 1 - Original Dataset.fdt
+│   │   ├── 2Filtered.set
+│   │   ├── 2Filtered.fdt
+│   │   ├── 3Filtered, T7 Interpolated.set
+│   │   ├── 3Filtered, T7 Interpolated.fdt
+│   │   ├── 4Filtered, T7 Interpolated, Av...set[cite: 2]
+│   │   ├── 4Filtered, T7 Interpolated, Av...fdt[cite: 2]
+│   │   ├── 5Filtered, T7 Interpolated, Av...set
+│   │   ├── 5Filtered, T7 Interpolated, Av...fdt
+│   │   ├── 6Filtered,T7Interpolated,Avg_...set
+│   │   ├── 6Filtered,T7Interpolated,Avg_...fdt
+│   │   ├── 7T1_Left_Epochs_Only.set
+│   │   ├── 7T1_Left_Epochs_Only.fdt
+│   │   ├── 8T2_Right_Epochs_Only.set
+│   │   └── 8T2_Right_Epochs_Only.fdt
+│   ├── Trained_Model_Weights/
+│   │   └── Readme.md
+│   ├── BCI_Approach_and_Classifier_T...m
+│   ├── Creating_13_Channel_dataset.m
+│   ├── Preprocessing.m
+│   ├── Visualisations.m
+│   └── Readme.md[cite: 3]
+└── Readme.md[cite: 3]
