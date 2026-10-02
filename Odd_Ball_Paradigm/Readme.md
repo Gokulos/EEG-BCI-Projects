@@ -37,7 +37,7 @@ Run `scripts/run_eeglab_erp.m` in MATLAB:
 - Segments epochs `[-500 ms, 1000 ms]` baseline-corrected from `[-500 ms, 0 ms]`.
 - Generates condition-separated ERPs and difference waveforms at `Cz`.
 
-### 2. BCILAB Machine Learning Pipeline
+### 2. BCILAB Approach and Classifier
 Run `scripts/run_bcilab_bci.m` in MATLAB:
 - Constructs an ERP paradigm approach using windowed mean features (150–600 ms post-stimulus in 50 ms slices).
 - Fits a shrinkage Linear Discriminant Analysis (LDA) classifier.
