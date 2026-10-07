@@ -21,12 +21,6 @@ This repository contains reproducible pipelines for electroencephalography (EEG)
    - Evaluates cognitive attentional allocation and the P300 component.
    - Frequent standard stimuli (`'S  1'`) vs. infrequent oddball stimuli (`'S  2'`).
 
-## Prerequisites
-
-- MATLAB (R2018b or later recommended)
-- [EEGLAB Toolbox](https://sccn.ucsd.edu/eeglab/) (with `bva-io` plugin for `.vhdr` support)
-- [BCILAB Toolbox](https://github.com/sccn/bcilab)
-
 ## Quick Start
 
 ### 1. EEGLAB Preprocessing & ERPs
