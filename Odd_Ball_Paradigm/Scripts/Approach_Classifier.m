@@ -1,4 +1,4 @@
-%% 1. Load Dataset & Environment Setup
+%% Load Dataset
 clear; clc;
 
 % Load dataset directly from current working directory
@@ -8,12 +8,12 @@ fprintf('[INFO] Using dataset: %s\n', dataFile);
 % Launch BCILAB
 bcilab;
 
-%% 2. Import & Verify Dataset
+%% Import & Verify Dataset
 % Use exp_eval to materialize the BCILAB expression into a dataset struct
 full_data = exp_eval(io_loadset(dataFile));
 full_data = eeg_checkset(full_data);
 
-%% 3. Partition Data into Train (70%) & Test (30%) Splits
+%% Partition Data into Train (70%) & Test (30%) Splits
 split_sample = round(full_data.pnts * 0.70);
 
 % Slice dataset using EEGLAB's pop_select
@@ -23,7 +23,7 @@ test_data  = pop_select(full_data, 'point', [split_sample + 1, full_data.pnts]);
 train_data = eeg_checkset(train_data);
 test_data  = eeg_checkset(test_data);
 
-%% 4. Define Windowed Means Approach with LDA Classifier
+%% Define Windowed Means Approach with LDA Classifier
 myapproach = {'Windowmeans', ...
     'SignalProcessing', { ...
         'EpochExtraction', {'TimeWindow', [-0.2 0.8]} ...
@@ -40,7 +40,7 @@ myapproach = {'Windowmeans', ...
     } ...
 };
 
-%% 5. Train Model with 10-Fold Cross-Validation
+%% Train Model with 10-Fold Cross-Validation
 target_markers = {'S  1', 'S  2'};
 
 [train_loss, trained_model, train_stats] = bci_train( ...
@@ -63,10 +63,10 @@ else
 end
 fprintf('CV AUC Score:                          %.4f\n', cv_auc);
 fprintf('==========================================\n');
-%% 6. Visualize Model Parameters
+%% Visualize Model Parameters
 bci_visualize(trained_model);
 
-%% 7. Test Generalization on Held-Out Split
+%% Test Generalization on Held-Out Split
 [predictions, test_loss, test_stats] = bci_predict( ...
     'Model', trained_model, ...
     'Data', test_data ...
