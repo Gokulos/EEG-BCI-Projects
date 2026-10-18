@@ -163,7 +163,7 @@ In CSP, eigenvector polarities are mathematically arbitrary; absolute magnitude 
 * **Pattern 2 (Left Fist / T1):** Functions as a lateral reference component, isolating left-lateral motor strip power (**`C5` -6.1516**) to suppress non-task-specific bilateral activity.
 
 > [!NOTE]
-> The numerical weights verify that the 88.89% classification accuracy is grounded in physiologically valid, contralateral sensorimotor rhythm modulation rather than artifacts.
+> The numerical weights verify that the 88.89% classification accuracy is grounded in physiologically valid, contralateral sensorimotor rhythm modulation rather than artifacts, since small dataset, it is also overfitting prone
 
 ---
 
